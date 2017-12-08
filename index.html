@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+<div id="login-page">
+    <div class="form">
+
+        <form class="register-form" id="register_form">
+            <h4>SIGN UP</h4>
+            <input type="text" placeholder="name"/>
+            <input type="password" placeholder="password"/>
+            <input type="text" placeholder="email address"/>
+            <button>create</button>
+            <p class="message">Already registered? <button type="button" onclick="showLogin();">Sign In</button> </p>
+        </form>
+
+        <form class="login-form" id="login_form" >
+            <h4>SIGN IN</h4>
+            <input type="text" placeholder="username" id="login_username"/>
+            <input type="password" placeholder="password" id="login_password" />
+            <button onclick="login();">login</button>
+            <p class="message">Not registered? <button type="button" onclick="showRegistration();">Create an account</button></p>
+        </form>
+
+    </div>
+</div>
+<script>
+    function showRegistration() {
+        document.getElementById('login_form').style.display = "none";
+        document.getElementById('register_form').style.display = "inline";
+    }
+    function showLogin() {
+        document.getElementById('register_form').style.display = "none";
+        document.getElementById('login_form').style.display = "inline";
+    }
+    function login() {
+        var username = document.getElementById('login_username').value;
+        var password = document.getElementById('login_password').value;
+
+    }
+    showLogin();
+</script>
+</body>
+</html>
